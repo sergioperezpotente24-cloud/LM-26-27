@@ -4,189 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CANDYMAN</title>
+
+    <title>Arkanthia - Inicio</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<body>
+<body class="pagina-inicio">
 
     <!-- MENÚ DE NAVEGACIÓN -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img alt="Logo de Arkanthia" height="45" src="./images/logo.png" width="45">
+                        <b>Arkanthia</b>
+                    </a>
 
-                <a class="navbar-brand" href="./index.html">CANDYMAN</a>
+                    <button aria-controls="menu" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu">
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./galeria.html">Catálogo</a>
+                            </li>
 
-                <div class="collapse navbar-collapse" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./productos.html">Productos</a>
+                            </li>
 
-                    <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Sobre Nosotros</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./index.html">Inicio</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historia.html">Historia</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./galeria.html">Galería</a>
-                        </li>
-
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </header>
-
 
     <main>
 
-        <section class="container my-4">
+        <!-- CARRUSEL-->
+        <section>
 
-            <div class="row g-3">
+            <div id="carruselArkanthia"
+                 class="carousel slide"
+                 data-bs-ride="carousel"
+                 data-bs-interval="3000">
 
-                <div class="col-md-6">
+                <div class="carousel-inner">
 
-                    <h1 class="text-danger fw-bold">CANDYMAN</h1>
+                    <!-- PRIMERA IMAGEN -->
+                    <div class="carousel-item active">
 
-                    <h2>¿Te atreves a decir su nombre?</h2>
+                        <img src="./images/paisaje.png"
+                             class="d-block w-100 imagen-carrusel"
+                             alt="Mundo mágico de Arkanthia">
 
-                    <h3>La leyenda del espejo</h3>
+                        <div class="carousel-caption">
+                            <h1>ARKANTHIA</h1>
+                            <p>Donde la magia se convierte en leyenda</p>
+                        </div>
 
-                    <p>
-                        Candyman es un personaje de terror
-                        que aparece cuando alguien pronuncia
-                        su nombre cinco veces frente a un espejo.
-                    </p>
+                    </div>
 
-                    <p>
-                        Lleva un gancho en lugar de una mano
-                        y está rodeado de abejas.
-                    </p>
+                    <!-- SEGUNDA IMAGEN -->
+                    <div class="carousel-item">
 
-                    <p class="fw-bold">
-                        ¡No pronuncies su nombre cinco veces!
-                    </p>
+                        <img src="./images/mas pociones.png"
+                             class="d-block w-100 imagen-carrusel"
+                             alt="Pociones mágicas">
+
+                        <div class="carousel-caption">
+                            <h2>Pociones mágicas</h2>
+                            <p>Descubre el poder de nuestros elixires</p>
+                        </div>
+
+                    </div>
+
+                    <!-- TERCERA IMAGEN -->
+                    <div class="carousel-item">
+
+                        <img src="./images/huevos.png"
+                             class="d-block w-100 imagen-carrusel"
+                             alt="Grimorios mágicos">
+
+                        <div class="carousel-caption">
+                            <h2>Grimorios ancestrales</h2>
+                            <p>Conoce los secretos de la magia</p>
+                        </div>
+
+                    </div>
+
+                    <!-- CUARTA IMAGEN -->
+                    <div class="carousel-item">
+
+                        <img src="./images/aves.png"
+                             class="d-block w-100 imagen-carrusel"
+                             alt="Huevos de criaturas mágicas">
+
+                        <div class="carousel-caption">
+                            <h2>Criaturas legendarias</h2>
+                            <p>Explora los misterios de otros mundos</p>
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <div class="col-md-6">
+                <!-- FLECHA ANTERIOR -->
+                <button class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carruselArkanthia"
+                        data-bs-slide="prev">
 
-                    <img src="./img/monstruo.jpg"
-                         class="img-fluid rounded"
-                         alt="Monstruo Candyman">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
 
-                </div>
+                <!-- FLECHA SIGUIENTE -->
+                <button class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carruselArkanthia"
+                        data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
 
             </div>
+        </section>
+
+        <!-- PRESENTACIÓN DE LA TIENDA -->
+        <section class="container my-4">
+
+            <h2 class="text-center">Bienvenido a Arkanthia</h2>
+
+            <p class="text-center">
+                Descubre una tienda llena de magia,
+                criaturas fantásticas, pociones,
+                grimorios y reliquias legendarias.
+            </p>
 
         </section>
 
-
+        <!-- CATEGORÍAS -->
         <section class="container my-4">
+
+            <h2 class="text-center">Nuestras categorías</h2>
 
             <div class="row g-3">
 
+                <!-- TARJETA POCIONES -->
                 <div class="col-md-6">
 
-                    <h2>Historia y leyendas</h2>
+                    <div class="card h-100 shadow-sm" style="max-width:22rem;">
 
-                    <p>
-                        Candyman está relacionado con
-                        la leyenda de Daniel Robitaille,
-                        un artista que sufrió una muerte
-                        terrible y se convirtió en
-                        una figura sobrenatural.
-                    </p>
+                        <img src="./images/grimorios.png"
+                             class="card-img-top"
+                             alt="Pociones">
 
-                    <p>
-                        Descubre cómo comenzó su historia
-                        y cuáles son sus misteriosos poderes.
-                    </p>
+                        <div class="card-body">
 
-                    <a href="./historia.html" class="btn btn-danger">
-                        Conocer su historia
-                    </a>
+                            <h5 class="card-title">Pociones</h5>
 
+                            <p class="card-text">
+                                Descubre pociones mágicas
+                                con poderes sorprendentes.
+                            </p>
+
+                            <a href="galeria.html#pociones " class="btn btn-magia">
+                                Ver pociones
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
 
+                <!-- TARJETA GRIMORIOS -->
                 <div class="col-md-6">
 
-                    <img src="./img/puerta.jpg"
-                         class="img-fluid rounded"
-                         alt="Puerta misteriosa de Candyman">
+                    <div class="card h-100 shadow-sm" style="max-width:22rem;">
 
+                        <img src="./images/grimorios.png"
+                             class="card-img-top"
+                             alt="Grimorios">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">Grimorios</h5>
+
+                            <p class="card-text">
+                                Libros antiguos que contienen
+                                hechizos y secretos mágicos.
+                            </p>
+
+                            <a href="galeria.html#grimorios " class="btn btn-magia">
+                                Ver grimorios
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA CRIATURAS -->
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm" style="max-width:22rem;">
+
+                        <img src="./images/huevos.png"
+                             class="card-img-top"
+                             alt="Criaturas">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">Criaturas</h5>
+
+                            <p class="card-text">
+                                Huevos de dragón y otras
+                                criaturas de mundos fantásticos.
+                            </p>
+
+                            <a href="galeria.html#criaturas " class="btn btn-magia">
+                                Ver criaturas
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA RELIQUIAS -->
+                <div class="col-md-6">
+
+                    <div class="card h-100 shadow-sm" style="max-width:22rem;">
+
+                        <img src="./images/reliquias.png"
+                             class="card-img-top"
+                             alt="Reliquias">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">Reliquias</h5>
+
+                            <p class="card-text">
+                                Objetos legendarios y
+                                artefactos encantados.
+                            </p>
+
+                            <a href="galeria.html#reliquias " class="btn btn-magia">
+                                Ver reliquias
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
-        </section>
-
-
-        <!-- SECCIÓN 3: GALERÍA -->
-        <section class="container my-4">
-
-            <div class="row g-3">
-
-                <div class="col-md-6">
-
-                    <h2>El rincón del terror</h2>
-
-                    <p>
-                        Imágenes relacionadas con la
-                        leyenda de Candyman.
-                    </p>
-
-                    <p>
-                        Espejos, lugares oscuros y
-                        escenarios llenos de misterio.
-                    </p>
-
-                    <a href="./galeria.html" class="btn btn-danger">
-                        Ver galería
-                    </a>
-
-                </div>
-
-                <div class="col-md-6">
-
-                    <img src="./img/espejo.jpg"
-                         class="img-fluid rounded"
-                         alt="Espejo relacionado con Candyman">
-
-                </div>
-
-            </div>
-
         </section>
 
     </main>
 
+    <!-- PIE DE PÁGINA -->
+    <footer class="text-center p-3">
 
-    <footer>
+        <p>Arkanthia - Tienda de objetos mágicos</p>
 
-        <p>Halloween - La leyenda de Candyman</p>
-
-          <!-- JavaScript de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <p>Proyecto de Lenguajes de Marcas - 1º DAM</p>
 
     </footer>
 
-
-  
+    <!-- JAVASCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

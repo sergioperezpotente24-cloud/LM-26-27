@@ -1,163 +1,573 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería - Candyman</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Galería</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Mi archivo CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
+
 <body>
 
-    <!-- MENÚ -->
-
-    
     <!-- MENÚ DE NAVEGACIÓN -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">
+                        <img alt="Logo de Arkanthia" height="45" src="./images/logo.png" width="45">
+                        <b>Arkanthia</b>
+                    </a>
 
-                <a class="navbar-brand" href="./index.html">CANDYMAN</a>
+                    <button aria-controls="menu" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu">
+                    <div class="collapse navbar-collapse" id="menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Inicio</a>
+                            </li>
 
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./galeria.html">Catálogo</a>
+                            </li>
 
-                <div class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./productos.html">Productos</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Inicio</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nosotros.html">Sobre Nosotros</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./historia.html">Historia</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="./galeria.html">Galería</a>
-                        </li>
-
-                    </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+            </nav>
 
+    <!-- PORTADA -->
+    <header id="inicio" class="portada text-center">
+
+        <div class="container py-5">
+
+            <h1 class="display-3 fw-bold">TIENDA MÁGICA</h1>
+
+            <p class="lead">
+                Descubre un mundo lleno de magia, criaturas y objetos encantados.
+            </p>
+
+            <a href="#galeria" class="btn btn-primary mt-3">
+                Explorar catálogo
+            </a>
+
+            <div class="separador-estrellas">
+                ✦ ✧ ✦ ✧ ✦
             </div>
-        </nav>
+
+        </div>
+
     </header>
-    <!-- GALERÍA -->
+
+    <!-- CATÁLOGO -->
     <main>
-        
-<!-- GALERÍA -->
-<section class="container my-4">
+        <section id="galeria" class="container-fluid py-5">
 
-    <h1 class="text-center">El rincón del terror</h1>
-    <p class="text-center">
-        Descubre los lugares y objetos más terroríficos de Candyman.
-    </p>
+            <h2 class="text-center mb-2">Nuestro catálogo</h2>
 
-    <div class="row g-3">
+            <p class="text-center texto-intro mb-4">
+                Encuentra todo lo necesario para tus aventuras en nuestro amplio catálogo mágico.
+            </p>
 
-        <!-- TARJETA 1 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/candyman.jpg" class="card-img-top" alt="Candyman">
-                <div class="card-body">
-                    <h5 class="card-title">Candyman</h5>
-                    <p class="card-text">No pronuncies su nombre cinco veces.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+            <div class="row g-4">
+
+                <!-- POCIONES -->
+                <div class="col-12">
+                    <h2 id="pociones" class="titulo-categoria text-center">✧POCIONES✧</h2>
                 </div>
-            </div>
-        </div>
 
-        <!-- TARJETA 2 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/espejo.jpg" class="card-img-top" alt="Espejo">
-                <div class="card-body">
-                    <h5 class="card-title">El espejo</h5>
-                    <p class="card-text">Nunca invoques aquello que no puedes controlar.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+                <!-- POCIÓN 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/vida.png" class="card-img-top" alt="Poción de vida">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de vida</h3>
+                            <p class="card-text">Recupera energía y vitalidad después de una aventura.</p>
+                            <p class="precio"><strong>Precio:</strong> 25 monedas de oro</p>
+                            <a href="./productos.html#pocion-vida" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- TARJETA 3 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/gancho.jpg" class="card-img-top" alt="Gancho">
-                <div class="card-body">
-                    <h5 class="card-title">El gancho</h5>
-                    <p class="card-text">Cuando escuches sus pasos, ya será demasiado tarde.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+                <!-- POCIÓN 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/mana.png" class="card-img-top" alt="Poción de maná">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de maná</h3>
+                            <p class="card-text">Restaura la energía mágica necesaria para lanzar hechizos.</p>
+                            <p class="precio"><strong>Precio:</strong> 30 monedas de oro</p>
+                            <a href="./productos.html#pocion-mana" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- TARJETA 4 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/abejas.jpg" class="card-img-top" alt="Abejas">
-                <div class="card-body">
-                    <h5 class="card-title">Las abejas</h5>
-                    <p class="card-text">Su zumbido anuncia la llegada de Candyman.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+                <!-- POCIÓN 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/invisibilidad.png" class="card-img-top" alt="Poción de invisibilidad">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de invisibilidad</h3>
+                            <p class="card-text">Permite desaparecer durante un breve periodo de tiempo.</p>
+                            <p class="precio"><strong>Precio:</strong> 50 monedas de oro</p>
+                            <a href="./productos.html#pocion-invisibilidad" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- TARJETA 5 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/edificio.jpg" class="card-img-top" alt="Edificio abandonado">
-                <div class="card-body">
-                    <h5 class="card-title">El edificio abandonado</h5>
-                    <p class="card-text">Entre sus paredes se esconde una leyenda aterradora.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+                <!-- POCIÓN 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/fuerza.png" class="card-img-top" alt="Poción de fuerza">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de fuerza</h3>
+                            <p class="card-text">Aumenta temporalmente la fuerza física del aventurero.</p>
+                            <p class="precio"><strong>Precio:</strong> 40 monedas de oro</p>
+                            <a href="./productos.html#pocion-fuerza" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- TARJETA 6 -->
-        <div class="col-md-6">
-            <div class="card h-100 shadow-sm" style="max-width:22rem;">
-                <img src="./img/pasillo.jpg" class="card-img-top" alt="Pasillo oscuro">
-                <div class="card-body">
-                    <h5 class="card-title">El pasillo oscuro</h5>
-                    <p class="card-text">No mires atrás, puede que alguien te esté siguiendo.</p>
-                    <a href="historia.html" class="btn btn-success">Descubre más</a>
+                <!-- POCIÓN 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/veneno.png" class="card-img-top" alt="Poción de veneno">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de veneno</h3>
+                            <p class="card-text">Una peligrosa mezcla capaz de debilitar a cualquier criatura.</p>
+                            <p class="precio"><strong>Precio:</strong> 45 monedas de oro</p>
+                            <a href="./productos.html#pocion-veneno" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- POCIÓN 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/velocidad.png" class="card-img-top" alt="Poción de velocidad">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Poción de velocidad</h3>
+                            <p class="card-text">Permite moverse con una rapidez extraordinaria durante unos minutos.</p>
+                            <p class="precio"><strong>Precio:</strong> 35 monedas de oro</p>
+                            <a href="./productos.html#pocion-velocidad" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIOS -->
+                <div class="col-12">
+                    <h2 id="grimorios" class="titulo-categoria text-center">✧GRIMORIOS✧</h2>
+                </div>
+
+                <!-- GRIMORIO 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/fuego.png" class="card-img-top" alt="Grimorio de fuego">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de fuego</h3>
+                            <p class="card-text">Contiene hechizos relacionados con las llamas y el fuego.</p>
+                            <p class="precio"><strong>Precio:</strong> 100 monedas de oro</p>
+                            <a href="./productos.html#grimorio-fuego" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIO 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/sombras.png" class="card-img-top" alt="Grimorio de sombras">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de sombras</h3>
+                            <p class="card-text">Un antiguo libro dedicado a la magia oscura.</p>
+                            <p class="precio"><strong>Precio:</strong> 150 monedas de oro</p>
+                            <a href="./productos.html#grimorio-sombras" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIO 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/naturaleza.png" class="card-img-top" alt="Grimorio de naturaleza">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de naturaleza</h3>
+                            <p class="card-text">Enseña hechizos de plantas, animales y elementos naturales.</p>
+                            <p class="precio"><strong>Precio:</strong> 120 monedas de oro</p>
+                            <a href="./productos.html#grimorio-naturaleza" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIO 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/hielo.png" class="card-img-top" alt="Grimorio de hielo">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de hielo</h3>
+                            <p class="card-text">Contiene hechizos capaces de controlar el hielo y las tormentas de nieve.</p>
+                            <p class="precio"><strong>Precio:</strong> 130 monedas de oro</p>
+                            <a href="./productos.html#grimorio-hielo" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIO 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/sanación.png" class="card-img-top" alt="Grimorio de sanación">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de sanación</h3>
+                            <p class="card-text">Enseña poderosos hechizos para sanar heridas y recuperar energía.</p>
+                            <p class="precio"><strong>Precio:</strong> 110 monedas de oro</p>
+                            <a href="./productos.html#grimorio-sanacion" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRIMORIO 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/conjuración.png" class="card-img-top" alt="Grimorio de conjuración">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Grimorio de conjuración</h3>
+                            <p class="card-text">Un libro antiguo capaz de invocar criaturas ancestrales.</p>
+                            <p class="precio"><strong>Precio:</strong> 180 monedas de oro</p>
+                            <a href="./productos.html#grimorio-conjuracion" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURAS MÁGICAS -->
+                <div class="col-12">
+                    <h2 id="criaturas" class="titulo-categoria text-center">✧CRIATURAS MÁGICAS✧</h2>
+                </div>
+
+                <!-- CRIATURA 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/dragón.png" class="card-img-top" alt="Huevo de dragón">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo de dragón</h3>
+                            <p class="card-text">Un misterioso huevo de dragón con escamas resistentes al fuego.</p>
+                            <p class="precio"><strong>Precio:</strong> 500 monedas de oro</p>
+                            <a href="./productos.html#huevo-dragon" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURA 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/fénix.png" class="card-img-top" alt="Huevo de fénix">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo de fénix</h3>
+                            <p class="card-text">Un huevo legendario del que nacerá un ave de fuego.</p>
+                            <p class="precio"><strong>Precio:</strong> 750 monedas de oro</p>
+                            <a href="./productos.html#huevo-fenix" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURA 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/helado.png" class="card-img-top" alt="Huevo de dragón de hielo">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo de dragón de hielo</h3>
+                            <p class="card-text">Un huevo de criatura capaz de controlar las bajas temperaturas.</p>
+                            <p class="precio"><strong>Precio:</strong> 600 monedas de oro</p>
+                            <a href="./productos.html#huevo-dragon-hielo" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURA 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/unicornio.png" class="card-img-top" alt="Huevo de unicornio">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo de unicornio</h3>
+                            <p class="card-text">Un huevo muy raro del que nacerá una criatura de poderes curativos.</p>
+                            <p class="precio"><strong>Precio:</strong> 800 monedas de oro</p>
+                            <a href="./productos.html#huevo-unicornio" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURA 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/grifo.png" class="card-img-top" alt="Huevo de grifo">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo de grifo</h3>
+                            <p class="card-text">De este huevo nacerá un poderoso grifo, mitad águila y mitad león.</p>
+                            <p class="precio"><strong>Precio:</strong> 650 monedas de oro</p>
+                            <a href="./productos.html#huevo-grifo" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRIATURA 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/misterioso.png" class="card-img-top" alt="Huevo misterioso">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Huevo misterioso</h3>
+                            <p class="card-text">Un huevo misterioso del que nacerá un pequeño compañero mágico aleatorio.</p>
+                            <p class="precio"><strong>Precio:</strong> 400 monedas de oro</p>
+                            <a href="./productos.html#huevo-misterioso" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIAS -->
+                <div class="col-12">
+                    <h2 id="reliquias" class="titulo-categoria text-center">✧RELIQUIAS✧</h2>
+                </div>
+
+                <!-- RELIQUIA 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/amuleto.png" class="card-img-top" alt="Amuleto de protección">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Amuleto de protección</h3>
+                            <p class="card-text">Un amuleto antiguo que protege contra las maldiciones.</p>
+                            <p class="precio"><strong>Precio:</strong> 200 monedas de oro</p>
+                            <a href="./productos.html#amuleto-proteccion" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIA 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/cristal.png" class="card-img-top" alt="Cristal de poder">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Cristal de poder</h3>
+                            <p class="card-text">Un cristal que almacena grandes cantidades de energía mágica.</p>
+                            <p class="precio"><strong>Precio:</strong> 300 monedas de oro</p>
+                            <a href="./productos.html#cristal-poder" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIA 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/anillo.png" class="card-img-top" alt="Anillo encantado">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Anillo encantado</h3>
+                            <p class="card-text">Un anillo encantado que potencia las habilidades mágicas.</p>
+                            <p class="precio"><strong>Precio:</strong> 250 monedas de oro</p>
+                            <a href="./productos.html#anillo-encantado" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIA 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/corona.png" class="card-img-top" alt="Corona antigua">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Corona antigua</h3>
+                            <p class="card-text">Una corona legendaria que perteneció a un antiguo rey hechicero.</p>
+                            <p class="precio"><strong>Precio:</strong> 1000 monedas de oro</p>
+                            <a href="./productos.html#corona-antigua" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIA 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/orbe.png" class="card-img-top" alt="Orbe mágico">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Orbe mágico</h3>
+                            <p class="card-text">Una esfera encantada capaz de revelar tesoros ocultos.</p>
+                            <p class="precio"><strong>Precio:</strong> 350 monedas de oro</p>
+                            <a href="./productos.html#orbe-magico" class="btn btn-outline-danger">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RELIQUIA 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card h-100" id="margen">
+                        <img src="./images/daga.png" class="card-img-top" alt="Daga ancestral">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Daga ancestral</h3>
+                            <p class="card-text">Una daga encantada forjada por antiguos maestros de la magia.</p>
+                            <p class="precio"><strong>Precio:</strong> 550 monedas de oro</p>
+                            <a href="./productos.html#daga-ancestral">Más información</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-    </div>
-
-    <!-- BOTÓN FINAL -->
-    <div class="text-center my-4">
-        <a href="historia.html" class="btn btn-success">
-            Descubre el secreto
-        </a>
-    </div>
-
-</section>
-
+        </section>
     </main>
 
-      <footer>
+    <!-- LISTAS -->
+    <section id="listas" class="container py-5">
 
-        <p class="text-center">Halloween - La leyenda de Candyman</p>
+        <div class="separador-estrellas">
+            ✦ ✧ ✦ ✧ ✦
+        </div>
 
-          <!-- JavaScript de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <h2 class="text-center mb-4">Lo más destacado de Arkanthia</h2>
 
+        <div class="row g-4">
+
+            <!-- LISTA ORDENADA 1 -->
+            <div class="col-12 col-md-6">
+                <div class="caja-informacion">
+
+                    <h3 class="text-center">✧ Los 5 más vendidos ✧</h3>
+
+                    <ol>
+                        <li>Poción de vida</li>
+                        <li>Grimorio de fuego</li>
+                        <li>Amuleto de protección</li>
+                        <li>Huevo de dragón</li>
+                        <li>Cristal de poder</li>
+                    </ol>
+
+                </div>
+            </div>
+
+            <!-- LISTA ORDENADA 2 -->
+            <div class="col-12 col-md-6">
+                <div class="caja-informacion">
+
+                    <h3 class="text-center">✧ Imprescindibles ✧</h3>
+
+                    <ol>
+                        <li>Orbe mágico</li>
+                        <li>Amuleto de protección</li>
+                        <li>Poción de invisibilidad</li>
+                        <li>Poción de maná</li>
+                        <li>Grimorio de invocación</li>
+                    </ol>
+
+                </div>
+            </div>
+
+            <!-- LISTA DESORDENADA -->
+            <div class="col-12">
+                <div class="caja-informacion">
+
+                    <h3 class="text-center">✧ Recomendaciones para aventureros ✧</h3>
+
+                    <ul>
+                        <li>Guerreros: Poción de fuerza y daga ancestral.</li>
+                        <li>Magos: Grimorio de conjuración y poción de maná.</li>
+                        <li>Exploradores: Poción de invisibilidad y orbe mágico.</li>
+                        <li>Domadores: Huevo de grifo y huevo de unicornio.</li>
+                        <li>Sanadores: Grimorio de curación y poción de vida.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TABLA -->
+    <section id="informacion" class="container py-5">
+
+        <div class="separador-estrellas">
+            ✦ ✧ ✦ ✧ ✦
+        </div>
+
+        <h2 class="text-center mb-4">Información del catálogo</h2>
+
+        <p class="text-center texto-intro mb-4">
+            Consulta las diferentes categorías de nuestra tienda mágica.
+        </p>
+
+        <div class="table-responsive">
+
+            <table class="table table-dark table-striped table-hover">
+
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Productos</th>
+                        <th>Precio mínimo</th>
+                        <th>Precio máximo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Pociones</td>
+                        <td>6</td>
+                        <td>25 monedas</td>
+                        <td>50 monedas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Grimorios</td>
+                        <td>6</td>
+                        <td>100 monedas</td>
+                        <td>180 monedas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Criaturas mágicas</td>
+                        <td>6</td>
+                        <td>400 monedas</td>
+                        <td>800 monedas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Reliquias</td>
+                        <td>6</td>
+                        <td>200 monedas</td>
+                        <td>1000 monedas</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer text-center">
+        <div class="container py-4">
+            <p class="mb-1">
+                &copy; 2026 ARKANTHIA
+            </p>
+            <p class="mb-0">
+                Tienda de objetos mágicos y reliquias legendarias.
+            </p>
+        </div>
     </footer>
+
+    <!-- JavaScript de Bootstrap: necesario para el menú móvil -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
